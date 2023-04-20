@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+
+    <h1><%=eTitle%></h1>
+    <p><%=eContent%></p>
+
+<% eposts.forEach(function(e){ %>
+    <h1><%=e.title%></h1>
+    <!-- <p><%=e.content.slice(0,100)%>...</p> -->
+    <p><%=e.content.substring(0,100)+" ... "%>
+    <a href="/<%=e.title%>">Read More</a>
+    <!-- <a href="http://localhost:3000/posts/<%=e.title%>">Read More</a> -->
+    </p>
+<% }) %>
+
+<%- include("partials/footer"); -%>
+
